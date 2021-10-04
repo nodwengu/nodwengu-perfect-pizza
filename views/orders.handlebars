@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen,projection" />
+   <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+</head>
+
+<body>
+   <div class="container">
+      <div class="row d-flex justify-content-center" style="border: solid white 1px; margin-top: 12px;">
+         <h1>Orders</h1> 
+      </div>
+      <div class="row">
+         <div class="budget pizza">
+            <table class="table table-sm table-borderless" style="width: 400px;">
+               {{#each orders}}
+                  <tr>
+                     <td style="vertical-align: middle;">#{{orderId}}</td>
+                     <td class="smallQuantity" style="vertical-align: middle;">{{status}}</td>
+                     <td id="smallTotal" style="vertical-align: middle;">R<span id="smallElem">{{amount}}</span></td>
+                     <td><a href="/pay-order/{{orderId}}" class="btn btn-outline-light orderBtn {{status}}" style="margin-bottom: 10px;">{{buttonStatus}}</a></td>
+                  </tr>
+               {{/each}}
+            </table>
+
+         </div>
+      </div>
+
+
+      {{!-- {{#if messages.info}}
+      <div class="entry">
+         <h1> {{messages.info}}</h1>
+      </div>
+      {{/if}} --}}
+
+   </div>
+
+   <script src="/js/jquery.js"></script>
+   <script src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>

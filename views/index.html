@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/css/style.css">
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Pizza Calculator</h1>
+
+    <div class="budget pizza" style="text-align: center;">
+      <h2>What's your Pizza Budget?</h2>
+      <div>
+        <input
+          type="text"
+          class="inputBudget"
+          placeholder="Enter amount available"
+        />
+      </div>
+      <br />
+      <div>Money available <strong>R<span id="budgetElem">0.00</span</strong></div><br />
+      <br />
+      <table>
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Buy/Remove</th>
+            <th>Quantity</th>
+            <th>Totals</th>
+          </tr>
+        </thead>
+       
+        <tr>
+          <td>Small</td>
+          <td class="cartBtn">
+            <button class="addSmallBtn">+</button>
+            <button class="removeSmallBtn">-</button>
+          </td>
+          <td class="smallQuantity">0</td>
+          <td id="smallTotal">R<span id="smallElem">0.00</span></td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td class="cartBtn">
+            <button class="addMediumBtn">+</button>
+            <button class="removeMediumBtn">-</button>
+          </td>
+          <td class="mediumQuantity">0</td>
+          <td id="mediumTotal">R<span id="mediumElem">0.00</span></td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td class="cartBtn">
+            <button class="addLargeBtn">+</button>
+            <button class="removeLargeBtn">-</button>
+          </td>
+          <td class="largeQuantity">0</td>
+          <td id="largeTotal">R<span id="largeElem">0.00</span></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td class="cartQuantityTotal">0</td>
+          <td id="total">R<span id="totalElem">0.00</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="pizzas" style="text-align: center;">
+      <div class="pizza small">
+        <h2>Small pizza</h2>
+        <div>
+          <strong>R23.75</strong>
+        </div>
+        <button class="buy smallButton">Buy</button>
+      </div>
+
+      <div class="pizza medium">
+        <h2>Medium pizza</h2>
+        <div>
+          <strong>R43.75</strong>
+        </div>
+        <button class="buy medButton">Buy</button>
+      </div>
+
+      <div class="pizza large">
+        <h2>Large pizza</h2>
+        <div>
+          <strong>R65.75</strong>
+        </div>
+        <button class="buy largeButton">Buy</button>
+      </div>
+    </div>
+  </body>
+  <script src="src/index.js"></script>
+</html>

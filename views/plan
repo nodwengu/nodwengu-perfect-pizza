@@ -1,0 +1,25 @@
+1. add UI for cart add and remove from each pizza category
+2. add UI for each category to see the number of pizzas added 
+
+1. Listen on addSmallBtn button event on the cart 
+1. Listen on addMediumBtn button event on the cart 
+1. Listen on addLargsBtn button event on the cart 
+
+1. Listen on removeSmallBtn button event on the cart 
+1. Listen on removeMediumBtn button event on the cart 
+1. Listen on removeLargsBtn button event on the cart 
+
+Pizza = {
+    size,
+    instock,
+    price,
+    description,
+}
+
+Pizzaz:
+
+Small - R10
+
+Medium -R20
+
+Large - R30

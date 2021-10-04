@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen,projection" />
+   <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+</head>
+
+<body>
+   <div class="container">
+      <div class="row d-flex justify-content-center" style="border: solid white 1px; margin-top: 12px;">
+         <h1>Perfect Pizza</h1>
+      </div>
+      <div class="row">
+         <div class="budget pizza">
+            <h2 class="d-flex justify-content-center">Shopping cart</h2>
+
+            <table class="table table-sm table-borderless" style="width: 300px;">
+               <tr>
+                  <td>Small</td>
+                  <td class="cartBtn">
+                     <a href="/buy-small" class="btn btn-outline-light cartAddBtn">+</a>
+                     <a href="/buy-small" class="btn btn-outline-light cartMinusBtn">-</a>
+                  </td>
+                  <td class="smallQuantity">x {{quantities.smallQty}}</td>
+                  <td id="smallTotal">R<span id="smallElem">{{totals.smallTotal}}</span></td>
+               </tr>
+               <tr>
+                  <td>Medium</td>
+                  <td class="cartBtn">
+                     <a href="/buy-medium" class="btn btn-outline-light cartAddBtn">+</a>
+                     <a href="/buy-small" class="btn btn-outline-light cartMinusBtn">-</a>
+                  </td>
+                  <td class="mediumQuantity">x {{quantities.mediumQty}}</td>
+                  <td id="mediumTotal">R<span id="mediumElem">{{totals.mediumTotal}}</span></td>
+               </tr>
+               <tr>
+                  <td>Large</td>
+                  <td class="cartBtn">
+                     <a href="/buy-large" class="btn btn-outline-light cartAddBtn">+</a>
+                     <a href="/buy-small" class="btn btn-outline-light cartMinusBtn">-</a>
+                  </td>
+                  <td class="largeQuantity">x {{quantities.largeQty}}</td>
+                  <td id="largeTotal">R<span id="largeElem">{{totals.largeTotal}}</span></td>
+               </tr>
+               <tr>
+                  <td>Total</td>
+                  <td></td>
+                  <td></td>
+                  <td id="total">R<span id="totalElem">{{totals.grandTotal}}</span></td>
+               </tr>
+            </table>
+            <div class="d-flex justify-content-center">
+               <a href="/create-order" class="btn btn-outline-light orderBtn">Order</a>
+            </div>
+
+         </div>
+      </div>
+
+
+      {{!-- {{#if messages.info}}
+      <div class="entry">
+         <h1> {{messages.info}}</h1>
+      </div>
+      {{/if}} --}}
+
+      <div class="row">
+         <div class="col">
+            <div class="card small">
+               <img src="/images/small_pizza.jpeg" class="card-img-top" alt="...">
+               <div class="card-body">
+                  <h3>Small pizza</h3>
+                  <p class="card-text">Some quick example text to build on the card title and.</p>
+                  <h5>R23.75</h5>
+                  <a href="/buy-small" class="btn btn-outline-light buyBtn">Buy</a>
+               </div>
+            </div>
+         </div>
+
+         <div class="col">
+            <div class="card medium">
+               <img src="/images/small_pizza.jpeg" class="card-img-top" alt="...">
+               <div class="card-body">
+                  <h3>Medium pizza</h3>
+                  <p class="card-text">Some quick example text to build on the card title and.</p>
+                  <h5>R43.75</h5>
+                  <a href="/buy-medium" class="btn btn-outline-light buyBtn" type="submit">Buy</a>
+               </div>
+            </div>
+         </div>
+
+         <div class="col">
+            <div class="card large">
+               <img src="/images/small_pizza.jpeg" class="card-img-top" alt="...">
+               <div class="card-body">
+                  <h3>Large pizza</h3>
+                  <p class="card-text">Some quick example text to build on the card title and.</p>
+                  <h5>R65.75</h5>
+                  <a href="/buy-large" class="btn btn-outline-light buyBtn" type="submit">Buy</a>
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+
+   </div>
+
+   <script src="/js/jquery.js"></script>
+   <script src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>
