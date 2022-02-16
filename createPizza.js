@@ -40,6 +40,13 @@ module.exports = function CreatePizza() {
       }
    }
 
+   const getTotals1 = () =>  {
+      smallTotal,
+      mediumTotal,
+      largeTotal,
+      grandTotal
+   }
+
    function getQuanties() {
       return {
          smallQty,

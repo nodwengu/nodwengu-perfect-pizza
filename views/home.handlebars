@@ -7,6 +7,11 @@
    <title>Document</title>
    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen,projection" />
    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+   <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+
 </head>
 
 <body>
@@ -58,7 +63,30 @@
             </div>
 
          </div>
+
+         <div class="budget pizza">
+            <h2 class="d-flex justify-content-center">Shopping cart</h2>
+
+            <table class="table table-sm table-borderless" style="width: 300px;">
+
+               <tr>
+                  <td>
+                     <div>Teachable Machine Audio Model</div>
+                     <button type="button" onclick="init()">Start</button>
+                     <div id="label-container"></div>
+                  </td>
+               </tr>
+
+            </table>
+            <div class="d-flex justify-content-center">
+               <a href="/create-order" class="btn btn-outline-light orderBtn">Order</a>
+            </div>
+
+         </div>
       </div>
+
+
+
 
 
       {{!-- {{#if messages.info}}
@@ -106,6 +134,8 @@
 
 
       </div>
+
+      <h1>Icon</h1>
 
    </div>
 

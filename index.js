@@ -7,12 +7,16 @@ const path = require('path');
 const flash = require('express-flash');
 const session = require('express-session');
 
-// import sqlite modules
+// import sqlite modules  
 const sqlite3 = require('sqlite3');
 const { open } = require('sqlite');
 
 const CreatePizza = require('./createPizza');
 const createPizza = CreatePizza();
+
+const ModelFactory = require('./modelFactory');
+const modelFactory = ModelFactory();
+
 
 const app = express();
 
@@ -39,6 +43,7 @@ app.use(flash());
 
 app.get("/", async function (req, res) {
    try {
+      modelFactory.test();
       //const result = await db.all('SELECT * FROM pizza');
       // console.log("results: ", result);
       let totals = createPizza.getTotals();
@@ -50,6 +55,16 @@ app.get("/", async function (req, res) {
          totals,
          quantities
       });
+
+   } catch (error) {
+      console.log(error);
+   }
+
+});
+
+app.get("/model", async function (req, res) {
+   try {
+      res.render('model');
 
    } catch (error) {
       console.log(error);
